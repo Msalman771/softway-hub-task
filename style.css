@@ -569,3 +569,41 @@ div .btnin{
     margin-left: 70px;
     padding-top: 15px;
 }
+
+.ourletters{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: center;
+    margin-top: 30px;
+    background-color: #ccc;
+   }
+.ourletters h2{
+     margin: 0px 0px 5px 0px;
+}
+.ourletters p{
+    margin: 0px 0px 10px 0px;
+}
+.ourletters input{
+    width: 300px;
+    border: none;
+    background-color: #e0dddd;
+    height: 30px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+     box-shadow: 3px 3px 10px rgba(169, 69, 69, 0.4);
+}
+.ourletters span{
+    display: flex;
+    justify-content: center;
+}
+.ourletters button{
+    border-radius: 30px;
+    position: relative;
+    margin-left:-8px;
+    width: 100px;
+    border: none;
+    background-color: #47b2e4;
+    color: rgb(255, 253, 253);
+}
