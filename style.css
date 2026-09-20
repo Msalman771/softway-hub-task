@@ -577,7 +577,7 @@ div .btnin{
     height: 200px;
     justify-content: center;
     margin-top: 30px;
-    background-color: #ccc;
+    background-color: rgb(245, 246, 248);
    }
 .ourletters h2{
      margin: 0px 0px 5px 0px;
@@ -588,7 +588,7 @@ div .btnin{
 .ourletters input{
     width: 300px;
     border: none;
-    background-color: #e0dddd;
+    background-color: #ffffff;
     height: 30px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -601,9 +601,21 @@ div .btnin{
 .ourletters button{
     border-radius: 30px;
     position: relative;
-    margin-left:-8px;
+    margin-left:-12px;
     width: 100px;
     border: none;
     background-color: #47b2e4;
     color: rgb(255, 253, 253);
+}
+#footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    line-height: 20px;
+}
+.card1 h2,.card2 h2,.card3 h2{
+    color: #47b2e4;
+}
+.card3 a{
+    text-decoration: none;
 }
