@@ -4,81 +4,136 @@
     box-sizing: border-box;
     color: black;
 }
-.navbar{
-    display: flex;
+.site-header{
+     position: sticky;
+    top: 0px;
+    right: 0px;
     background-color: #3d4d6a;
+}
+.header-wrapper{
+    display: flex;
+    align-items: center; 
     justify-content: space-evenly;
-    align-items: center;
-    height: 50px;
-    width: 100%;
+    height: 60px;
 }
-.logo h1{
-    font: 30px;
-    color: #ffffff;
+.logo-section a{
+   color: white;
+   text-decoration: none;
+   font-size: 20px;
 }
-.navmenu{
-    width: 70%;
-    display: flex;
-   gap: 0px;
-   margin-left: 350px;
-    /* align-items: center; */
+.main-nev{
+   display: flex;
+   gap: 30px;
 }
-.navmenu a,li{
-    list-style-type: none;
+.main-nev a{
     text-decoration: none;
+    color: white;
+    font-size: 20px;
 }
-.navmenu a{
-    width: 92;
-    height: 58;
-    font-size: 15px;
-    padding: 10px 15px;
-}
-div .btnin{
-    background-color: #47b2f4;
-    color: #ffffff;
-    height: 30px;
-    padding: 8px 25px;
-    margin: 0px 0px 0px 30px;
+.header-btn a{
+    text-decoration: none;
+    background-color: #47b2e4;
+    border: 2px solid #47b2f4;
     border-radius: 30px;
-    border: none;
+    color: white;
+    padding: 10px 25px;
+    
 }
-
+/* now convert header to media query */
+/* @media (max-width:900px)
+{
+    .header-wrapper{
+        height: 80px;
+    }
+    .main-nev{
+        gap: 10px;
+    }
+    .main-nev a{
+        font-size: 13px;
+    }
+    .logo-section a{
+        font-size: 20px;
+    }
+   
+}
+@media (max-width:800px){
+    .main-nev{
+        flex-direction: none;
+    }
+    .header-btn a{
+        padding: 3px 5px;
+        border: none;
+    }
+    .header-wrapper{
+        display: flex;
+        height: 100px;
+        
+    }
+}
+@media (max-width:393px){
+   
+    .main-nev{
+        display: none;
+    }
+    .header-btn a{
+        background-color:green;
+    }
+} */
 /* main  section*/
-.main{
+.hero-section{
     background-color: #3d4d6a;
-    display: flex;
-    /* justify-content: space-evenly; */
-    align-items: center;
-    /* gap: 30px; */
     height: 90vh;
+    padding: 100px;
 }
-
-.content {
+.hero-container{
+    display: flex;
+}
+.hero-content {
     width: 55%;
-    /* border: 2px solid white; */
     padding-left: 70px;
     padding-top: 60px;
     height: 60vh;
 }
-.content h1{
+.hero-content h1{
     font-size: 40px;
     margin: 20px;
-    /* padding-left: 100px; */
+    padding-left: 40px;
 }
-.content p{
+.hero-content p{
     color: rgba(255, 255, 255, 0.7);
     margin: 20px;
-    /* padding-left: 100px; */
+    padding-left:40px;
 }
-.img1{
+.hero-img1{
     width: 40%;
 
 }
-.img1 img {
+.hero-img1 img {
     width: 450px;
     height: 400px;
 }
+.hero-btn{
+    padding-left: 30p;
+} 
+.hero-btn{
+    margin-left: 60px;
+}
 
+@media(max-width:393px)
+{
+    .hero-container{
+        display: block;
+        align-items: center;
+    }
+    
+        .hero-content {
+    width: 100%;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 50%;
+
+    }
+}
 /* client section */
 
 .clients{
@@ -393,12 +448,12 @@ div .btnin{
     border-radius: 30px;
     background: linear-gradient(
         to right,
-        rgb(245, 244, 244) 0%,
-        white 35%,
-        rgb(200, 230, 230) 35%,
-        rgb(200, 230, 230) 65%,
-        white 55%,
-        white 100%
+        #ccc 0%,
+        #ccc 30%,
+        #47b2f4 30%,
+        #47b2f4 70%,
+        #ccc 70%,
+        #ccc 100%
     );
 }
 .pricing .pricing-container{
@@ -416,6 +471,9 @@ div .btnin{
     padding-top: 20px;
     line-height: 30px;
     border-radius: 10px;
+}
+.pricing-card ul li{
+    color: black;
 }
 .pricing-container .pricing-card a{
     display: inline-block;
@@ -593,6 +651,7 @@ div .btnin{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
      box-shadow: 3px 3px 10px rgba(169, 69, 69, 0.4);
+     padding-left: 10px;
 }
 .ourletters span{
     display: flex;
@@ -601,7 +660,7 @@ div .btnin{
 .ourletters button{
     border-radius: 30px;
     position: relative;
-    margin-left:-12px;
+    margin-left:-18px;
     width: 100px;
     border: none;
     background-color: #47b2e4;
@@ -612,10 +671,544 @@ div .btnin{
     justify-content: space-evenly;
     margin-top: 30px;
     line-height: 20px;
+    height: 300px;
+    align-items: center;
 }
 .card1 h2,.card2 h2,.card3 h2{
     color: #47b2e4;
 }
 .card3 a{
     text-decoration: none;
+}
+.card1 ul li,.card2 ul li{
+    color: black;
+}
+footer hr{
+    width: 70%;
+}
+
+
+/* =================================
+   RESPONSIVE DESIGN
+   ================================= */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 992px) {
+
+    /* Header */
+    .header-wrapper {
+        height: 70px;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .main-nev {
+        gap: 15px;
+    }
+
+    .main-nev a {
+        font-size: 14px;
+    }
+
+    .logo-section a {
+        font-size: 18px;
+    }
+
+    .header-btn a {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+
+    /* Hero */
+    .hero-section {
+        padding: 60px 30px;
+        height: auto;
+    }
+
+    .hero-content {
+        width: 50%;
+        padding-left: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+        padding-left: 10px;
+    }
+
+    .hero-content p {
+        padding-left: 10px;
+    }
+
+    .hero-img1 {
+        width: 50%;
+    }
+
+    .hero-img1 img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* Clients */
+    .clients {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+
+
+    /* About */
+    .about-us-content {
+        height: auto;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .left-content,
+    .right-content {
+        width: 50%;
+    }
+
+
+    /* Why Us */
+    .why-us {
+        height: auto;
+        padding: 50px 30px;
+    }
+
+    .image1 {
+        width: 400px;
+        padding-right: 20px;
+    }
+
+
+    /* Skills */
+    #skills {
+        height: auto;
+        padding: 50px 30px;
+        gap: 30px;
+    }
+
+    #img {
+        width: 50%;
+    }
+
+    #img img {
+        width: 100%;
+    }
+
+
+    /* Services */
+    #services {
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    .services_box {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+
+    /* Work Process */
+    .aos-animate {
+        flex-wrap: wrap;
+    }
+
+
+    /* Portfolio */
+    .column {
+        flex: 33.33%;
+        max-width: 33.33%;
+    }
+
+    .column img {
+        width: 100%;
+    }
+
+
+    /* Team */
+    .member1 {
+        width: 45%;
+    }
+
+
+    /* Pricing */
+    .pricing {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .pricing-container {
+        flex-wrap: wrap;
+    }
+
+
+    /* FAQ */
+    #myAccordian .accordianitem {
+        width: 70%;
+    }
+
+
+    /* Subscribe */
+    .subscribe-content {
+        width: 90%;
+    }
+
+    .subscribe-content img {
+        width: 250px;
+        margin-left: 30px;
+    }
+
+
+    /* Footer */
+    #footer {
+        height: auto;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 768px) {
+
+    /* Header */
+
+    .header-wrapper {
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .main-nev {
+        display: none;
+    }
+
+    .logo-section a {
+        font-size: 18px;
+    }
+
+    .header-btn a {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero-section {
+        padding: 50px 20px;
+    }
+
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        height: auto;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+        padding-left: 0;
+        margin: 15px 0;
+    }
+
+    .hero-content p {
+        padding-left: 0;
+    }
+
+    .hero-img1 {
+        width: 80%;
+        margin-top: 30px;
+    }
+
+    .hero-img1 img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hero-btn {
+        margin-left: 0;
+    }
+
+
+    /* Clients */
+
+    .clients {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: auto;
+        gap: 20px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .img-client img {
+        width: 90px;
+    }
+
+
+    /* About */
+
+    .about-us-content {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        align-items: flex-start;
+    }
+
+    .left-content,
+    .right-content {
+        width: 100%;
+    }
+
+
+    /* Why Us */
+
+    .why-us {
+        flex-direction: column;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .container-fluid {
+        padding-left: 0;
+    }
+
+    .image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .image1 {
+        width: 90%;
+        padding-right: 0;
+    }
+
+
+    /* Skills */
+
+    #skills {
+        flex-direction: column;
+        height: auto;
+        padding: 50px 20px;
+    }
+
+    #img {
+        width: 100%;
+        text-align: center;
+    }
+
+    #img img {
+        width: 90%;
+    }
+
+    .skill-bar {
+        width: 100%;
+    }
+
+
+    /* Services */
+
+    #services {
+        height: auto;
+    }
+
+    .services_box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services_box div.box-1 {
+        width: 80%;
+    }
+
+
+    /* Work Process */
+
+    .aos-animate {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-pr {
+        width: 90%;
+    }
+
+
+    /* Portfolio */
+
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+
+    .column img {
+        width: 100%;
+    }
+
+
+    /* Team */
+
+    .member {
+        flex-direction: column;
+    }
+
+    .member1 {
+        width: 90%;
+    }
+
+
+    /* Pricing */
+
+    .pricing {
+        height: auto;
+    }
+
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* Testimonial */
+
+    .testimonial-card img {
+        width: 150px;
+    }
+
+
+    /* FAQ */
+
+    .question {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    #myAccordian .accordianitem {
+        width: 95%;
+    }
+
+
+    /* Subscribe */
+
+    .subscribe {
+        height: auto;
+    }
+
+    .subscribe-content {
+        width: 90%;
+        flex-direction: column;
+        padding: 30px 20px;
+    }
+
+    .subscribe-content .content {
+        width: 100%;
+    }
+
+    .subscribe-content img {
+        width: 80%;
+        margin: 20px auto 0;
+    }
+
+
+    /* Newsletter */
+
+    .ourletters {
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .ourletters input {
+        width: 70%;
+    }
+
+
+    /* Footer */
+
+    #footer {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding: 40px 30px;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+
+@media (max-width: 480px) {
+
+    .header-wrapper {
+        height: 65px;
+    }
+
+    .logo-section a {
+        font-size: 16px;
+    }
+
+    .header-btn a {
+        padding: 7px 12px;
+        font-size: 12px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+
+    .clients {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+
+    .member1 {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+
+    .pricing-container .pricing-card {
+        width: 90%;
+    }
+
+
+    #myAccordian .accordianitem {
+        width: 100%;
+    }
+
+
+    .subscribe-form {
+        width: 100%;
+    }
+
+    .subscribe-content .content input {
+        width: 70%;
+    }
 }
